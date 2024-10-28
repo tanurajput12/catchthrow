@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(){
+                let c;
+            try {
+               let a= document.getElementById("no1").value;
+                let b=  document.getElementById("no2").value;
+                if(isNaN(a) ||isNaN(b))
+            {
+                throw "not use string values";
+            }
+            else{
+                if(b==0){
+                    throw "not divide byzero"
+                }
+                else{
+                    c=a/b;
+                    document.getElementById("demo").innerHTML="division:"+c;
+                }
+            }
+            }
+            catch(error){
+                document.getElementById("ans").innerHTML=error;
+            }
+            finally{
+                document.getElementById("ans1").innerHTML="this is alwaysexecuted answer:"+c;
+
+            }
+        }
+
+    </script>
+</head>
+<body>
+    Enter num 1: <input type="text" id="no1">
+    <br>
+    Enter num 2: <input  type="text" id="no2">
+    <br>
+    <button onclick="display()">click here</button>
+    <h1 id="ans">welcome</h1>
+    <h2 id="answer"></h2>
+</body>
+</html>
